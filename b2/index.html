@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .first-heading{
+    color: blueviolet;
+    font-size: 20px;
+    font:300;
+    text-align: center;
+}
+.dong1{
+    color: #9C9C9C;
+    font-size: 10px;
+    font:300;
+    text-align: center; 
+}
+.container{
+    width:400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #F5E1FD;
+    
+}
+#input-group{
+    padding: 6px 6px; /* trái, phải */
+    margin-top: 10px;
+    display: flex;
+}
+input-invoice{
+    display:block;
+    width: 280px;
+    padding: 20px 20px; /* trái, phải */
+    margin-top: 10px;
+    display: flex;
+    
+
+}
+
+.btn{
+    background: blueviolet;
+    color:#F5E1FD;
+    width: 30%;
+    text-transform: uppercase; /* chữ trong nút viết in hoa */
+    padding: 6px 10px; /* trái, phải */
+    margin-top: 30px;
+}
+
+</style>
+<body>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <div>
+        <h1 class="first-heading">ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h1>
+    </div>
+    <div>
+        <p class="dong1">Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhật tiếng Việt có dấu</p>
+        <p class="dong1">Các ý kiến đóng góp nên viết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm <i>(nếu có)</i> </p>
+    </div>
+    <div class="container">
+        <form action="#" method="post">
+    
+            <table>
+                <tr>
+                    <td>Họ Và Tên:</td>
+                    <td><input type="text" id="input-group" placeholder="Họ Và Tên" size="35" required></td>
+                </tr>
+                <tr>
+                    <td>Mã Thẻ:</td>
+                    <td><input type="text" id="input-group" placeholder="Mã Thẻ" size="35" required></td>
+                </tr>
+                <tr>
+                    <td>Số Điện Thoại:</td>
+                    <td><input type="tel" id="input-group" placeholder="Số Điện Thoại" size="35" required></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="input-group" placeholder="Email" size="35" required></td>
+                </tr>
+                <tr>
+                    <td>Loại Khách Hàng:</td>
+                    <td>
+                        <select id="input-invoice"  required>
+                            <option value="">Chọn loại khách hàng</option>
+                            <option value="vip">VIP</option>
+                            <option value="regular">Regular</option>
+                            <option value="new">New</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Mã Hóa Đơn:</td>
+                    <td><input type="text" id="input-group"  placeholder="Mã Hóa Đơn" size="35"></td>
+                </tr>
+                <tr>
+                    <td>Chi Tiết Mô Tả:</td>
+                    <td><textarea id="input-description" rows="5" cols="34" required></textarea></td>
+                </tr>
+            </table>
+            <button class="btn" type="submit">Gửi ý kiến</button>
+        </form>
+    </div>
+</tbody>
+</html>

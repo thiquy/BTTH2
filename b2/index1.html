@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <h1>Bài 1</h1>
+    <center>
+        <h1>
+            <center> Giải phương trình bậc I </center>
+        </h1>
+        <input type="text" id="a" placeholder="Hệ số a"><br> <!-- placeholder để hiển thị gợi ý trong ô-->
+        <input type="text" id="b" placeholder="Hệ số b"><br>
+
+        <button onclick="giaiphuongtrinh()">Giải phương trình</button>
+        <p>KẾT QUẢ</p>
+
+        <div id="result"></div>
+
+        <script>
+            function giaiphuongtrinh() {
+                var a = parseFloat(document.getElementById('a').value);
+                var b = parseFloat(document.getElementById('b').value);
+
+                if (isNaN(a) || isNaN(b)) { <!--isNaN() không điền số-->
+                    document.getElementById('result').innerHTML = "Vui lòng nhập các hệ số là số.";
+                    return;
+                }
+
+                if (a === 0) {
+                    if (b === 0) {
+                        document.getElementById('result').innerHTML = "Phương trình có vô số nghiệm.";
+                    } else {
+                        document.getElementById('result').innerHTML = "Phương trình vô nghiệm.";
+                    }
+                } else {
+                    var x = -b / a;
+                    document.getElementById('result').innerHTML = "Nghiệm x = " + x; //innerHTML là in ra
+                }
+            }
+        </script>
+    </center>
+</body>
+
+</html>
